@@ -1,0 +1,51 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+
+}
+
+
+
+.contener_s
+{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Soccer_field
+{
+    background-image: url(https://a.travel-assets.com/findyours-php/viewfinder/images/res70/348000/348798-Santiago-Bernabeu-Stadium.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 90%;
+    
+}
+.atac
+{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(165, 42, 42);
+}
+
+.mc
+{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 187, 0);
+}
+.df
+{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(94, 255, 0);
+}
+.gf
+{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(12, 85, 90);
+}

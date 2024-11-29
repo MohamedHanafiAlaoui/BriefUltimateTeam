@@ -538,6 +538,25 @@ playerName.addEventListener('input',function ()
   
 })
 
+let regxnamber=/^\d{1,2}$/
+
+let playerRating=document.getElementById('playerRating')
+
+playerRating.addEventListener('input',function ()
+{
+  if(regxnamber.test(this.value))
+  {
+    this.style.border ='3px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})
+
 let COUNTRY=document.getElementById('COUNTRY')
 
 COUNTRY.addEventListener('input',function ()
@@ -554,3 +573,4 @@ COUNTRY.addEventListener('input',function ()
   }
   
 })
+

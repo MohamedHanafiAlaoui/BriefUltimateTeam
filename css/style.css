@@ -2,6 +2,8 @@
 {
     padding: 0;
     margin: 0;
+    font-family: "Anton", sans-serif;
+
 
 
 }
@@ -21,6 +23,7 @@ body
 }
 
 
+
 .contener_sbg_img
 {
     width: 100%;
@@ -37,7 +40,6 @@ body
     font-size: 3rem;
     font-weight: bolder;
     margin: 20px 0;
-    font-family: "Anton", sans-serif;
 
 }
 
@@ -121,20 +123,36 @@ body
 
 
 
-.postion
-{
 
+
+.postion-card
+{
+    /* z-index: 1; */
     position: relative;
     width: 100px;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-
-
-   
+    /* display: none; */
 }
+
+.postion button
+{
+    padding: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+}
+
+.postion button:hover
+{
+    background-color: #006800;
+    color: aliceblue;
+}
+
 .cards_img
 {
     position: absolute;
@@ -183,7 +201,7 @@ body
 
 .element_player{
     /* background-color: #f3a30f; */
-    z-index: 1;
+    /* z-index: 1; */
     display: flex;
     align-items: center;
     justify-content:center;
@@ -195,7 +213,7 @@ body
 
 .Pozitie
 {   
-    position: absolute;
+    position: relativae;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,6 +221,7 @@ body
     width: 15px;
     left: 1px;
     top: 1px;
+
     
    
 }
@@ -215,14 +234,7 @@ body
     font-weight: bold;
 }
 
-.Pozitie_img
-{
 
-
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
 
 .Pozitie_img img{
     height: 50px;
@@ -235,6 +247,7 @@ body
     font-size: 0.5rem;
     text-align: center;
     color: #000;
+    font-weight: bold;
 }
 
 
@@ -245,3 +258,150 @@ body
     object-fit: contain;
 }
 
+.button_add
+{
+
+    position: absolute;
+    z-index: 0;
+
+
+
+}
+
+.postion 
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+
+}
+
+.changment_player
+{
+    width: 300px;
+    background-color: rgba(138, 143, 138, 0.329);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+.creat_player 
+{
+    width: 100%;
+    height: 80px;
+
+}
+
+.creat_player button
+{
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #f3a30f;
+    border: none;
+    cursor: pointer;
+}
+#button_afhce
+{
+    margin-top: 2px;
+    background-color: #e7af45;
+}
+
+.creat_player button:hover
+{
+    background-color: #553700;
+
+
+}
+
+.cardplyer
+{
+    width: 300px;
+    /* height: 100px; */
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+    border: 3px solid #bfc9c3;
+    /* background-color: #0068008a; */
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.cardplyer .imagePlayer
+{
+    height: 100px;
+    width: 100px;
+    background: #585858;
+    border-radius: 8px;
+
+}
+
+.cardplyer .imagePlayer img
+{
+    height: 100%;
+    /* width: 100px; */
+    
+}
+.informationPlayer
+{
+    margin: 2px;
+    width: 200px;
+    color: #e2d6d6;
+    position: relative;
+}
+
+.informationPlayer p
+{
+
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+.informationPlayer span
+{
+
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.informationPlayer button
+{
+    background-color: #015005c7;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    right:8px;
+    bottom: 5px;
+}
+
+
+
+.changment_player_afiche
+{
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+@media  (max-width : 930px) {
+    
+    
+    .contener_s{
+        width: 100%;
+        flex-direction: column;
+        gap:     20px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    
+}

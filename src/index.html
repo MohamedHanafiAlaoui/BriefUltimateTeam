@@ -272,16 +272,19 @@
         <section class="playerForm">
             
             <form id="playerForm">
+            <div class="details-forms">
+
+
                 
                 <div class="form-group">
                     <label for="playerName">Player Name</label>
                     <input type="text" id="playerName" placeholder="Enter Player Name" required />
                     <p>valide</p>
-
                 </div>
                 <div class="form-group">
                     <label for="playerImage">Player Image URL</label>
                     <input type="url" id="playerImage" placeholder="Enter Image URL" required />
+
                 </div>
                 <div class="form-group">
                     <label for="COUNTRY">Country</label>
@@ -313,10 +316,12 @@
                         <option value="LW">Left Wing (LW)</option>
                     </select>
                 </div>
+            </div>
     
-            
+            <div class="details">
+
                 <div class="details-form" id="regularPlayer" >
-                    <h3>Player Stats</h3>
+                    
                     <div class="flex-form">
                         <div>
                             <label for="playerPAC">PAC</label>
@@ -346,41 +351,14 @@
                 </div>
     
 
-                <div class="details-form" id="GoalKeeperPlayer" style="display: none;">
-                    <h3>Goalkeeper Stats</h3>
-                    <div class="flex-form">
-                        <div>
-                            <label for="DIV">DIV</label>
-                            <input type="number" id="DIV" placeholder="Diving" min="0" max="99" />
-                        </div>
-                        <div>
-                            <label for="HAN">HAN</label>
-                            <input type="number" id="HAN" placeholder="Handling" min="0" max="99" />
-                        </div>
-                        <div>
-                            <label for="KIC">KIC</label>
-                            <input type="number" id="KIC" placeholder="Kicking" min="0" max="99" />
-                        </div>
-                        <div>
-                            <label for="REF">REF</label>
-                            <input type="number" id="REF" placeholder="Reflexes" min="0" max="99" />
-                        </div>
-                        <div>
-                            <label for="SPE">SPE</label>
-                            <input type="number" id="SPE" placeholder="Speed" min="0" max="99" />
-                        </div>
-                        <div>
-                            <label for="POS">POS</label>
-                            <input type="number" id="POS" placeholder="Positioning" min="0" max="99" />
-                        </div>
-                    </div>
-                </div>
-    
-              
+
+                  
                 <div class="form-actions">
                     <button type="submit" id="submitForm">Save</button>
                     <button type="button" onclick="nambutton_edite()">Close</button>
                 </div>
+            </div>
+
             </form>
         </section>
 

@@ -416,7 +416,7 @@ let    players = [
     "positioning": 85
   }
 ]
-// let playerentr =[]
+let playerentr =[]
 let changment_player_afiche =document.querySelector('.changment_player_afiche')
 
 

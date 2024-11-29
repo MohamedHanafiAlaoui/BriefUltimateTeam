@@ -448,7 +448,9 @@ label {
 
 }
 
-
+*:focus {
+    outline: none;
+}
 
 
 #playerForm button {

@@ -527,7 +527,24 @@ playerName.addEventListener('input',function ()
 {
   if(regxname.test(this.value))
   {
-    this.style.border ='2px solid #7eff7e'
+    this.style.border ='3px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})
+
+let COUNTRY=document.getElementById('COUNTRY')
+
+COUNTRY.addEventListener('input',function ()
+{
+  if(regxname.test(this.value))
+  {
+    this.style.border ='3px solid #7eff7e'
 
     
   }

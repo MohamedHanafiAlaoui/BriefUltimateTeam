@@ -269,8 +269,117 @@
     
         </section>
 
-        <section>
+        <section class="playerForm">
             
+            <form id="playerForm">
+                
+                <div class="form-group">
+                    <label for="playerName">Player Name</label>
+                    <input type="text" id="playerName" placeholder="Enter Player Name" required />
+                </div>
+                <div class="form-group">
+                    <label for="playerImage">Player Image URL</label>
+                    <input type="url" id="playerImage" placeholder="Enter Image URL" required />
+                </div>
+                <div class="form-group">
+                    <label for="COUNTRY">Country</label>
+                    <input type="url" id="COUNTRY" placeholder="Enter Country Image URL" required />
+                </div>
+                <div class="form-group">
+                    <label for="playerRating">Rating</label>
+                    <input type="number" id="playerRating" placeholder="Enter Rating (0-99)" min="0" max="99" required />
+                </div>
+                <div class="form-group">
+                    <label for="playerClub">Club Image URL</label>
+                    <input type="url" id="playerClub" placeholder="Enter Club Image URL" required />
+                </div>
+    
+                <div class="form-group">
+                    <label for="Position_input">Position</label>
+                    <select name="Position" id="Position_input" required>
+                        <option value="" disabled selected>Select Position</option>
+                        <option value="GK">Goalkeeper (GK)</option>
+                        <option value="RB">Right Back (RB)</option>
+                        <option value="CBR">Center Back Right (CBR)</option>
+                        <option value="CBL">Center Back Left (CBL)</option>
+                        <option value="LB">Left Back (LB)</option>
+                        <option value="RM">Right Midfielder (RM)</option>
+                        <option value="CM">Center Midfielder (CM)</option>
+                        <option value="LM">Left Midfielder (LM)</option>
+                        <option value="RW">Right Wing (RW)</option>
+                        <option value="ST">Striker (ST)</option>
+                        <option value="LW">Left Wing (LW)</option>
+                    </select>
+                </div>
+    
+            
+                <div class="details-form" id="regularPlayer" >
+                    <h3>Player Stats</h3>
+                    <div class="flex-form">
+                        <div>
+                            <label for="playerPAC">PAC</label>
+                            <input type="number" id="playerPAC" placeholder="Pace" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="playerSHO">SHO</label>
+                            <input type="number" id="playerSHO" placeholder="Shooting" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="playerPAS">PAS</label>
+                            <input type="number" id="playerPAS" placeholder="Passing" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="playerDRI">DRI</label>
+                            <input type="number" id="playerDRI" placeholder="Dribbling" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="playerDEF">DEF</label>
+                            <input type="number" id="playerDEF" placeholder="Defense" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="playerPHY">PHY</label>
+                            <input type="number" id="playerPHY" placeholder="Physical" min="0" max="99" />
+                        </div>
+                    </div>
+                </div>
+    
+
+                <div class="details-form" id="GoalKeeperPlayer" style="display: none;">
+                    <h3>Goalkeeper Stats</h3>
+                    <div class="flex-form">
+                        <div>
+                            <label for="DIV">DIV</label>
+                            <input type="number" id="DIV" placeholder="Diving" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="HAN">HAN</label>
+                            <input type="number" id="HAN" placeholder="Handling" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="KIC">KIC</label>
+                            <input type="number" id="KIC" placeholder="Kicking" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="REF">REF</label>
+                            <input type="number" id="REF" placeholder="Reflexes" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="SPE">SPE</label>
+                            <input type="number" id="SPE" placeholder="Speed" min="0" max="99" />
+                        </div>
+                        <div>
+                            <label for="POS">POS</label>
+                            <input type="number" id="POS" placeholder="Positioning" min="0" max="99" />
+                        </div>
+                    </div>
+                </div>
+    
+              
+                <div class="form-actions">
+                    <button type="submit" id="submitForm">Save</button>
+                    <button type="button" id="CloseForm">Close</button>
+                </div>
+            </form>
         </section>
 
 

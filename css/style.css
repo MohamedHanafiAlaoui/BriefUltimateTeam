@@ -12,11 +12,17 @@ body
     background-image: url("../img/All_Streams_b.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contener_s
 {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -390,6 +396,109 @@ body
     overflow-y: auto;
     padding-bottom: 10px;
 }
+.playerForm
+{
+    top: 0;
+    z-index: 12;
+    position: absolute;
+    background-color: #e4e0dcbe;
+    /* height: 100%; */
+    width: 100%;
+    /* display: flex; */
+    align-items: center;
+    display: none;
+
+}
+
+#playerForm {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #000000d3;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
+
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+
+label {
+     display: flex; 
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fff;
+
+}
+
+input, select {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+#playerForm button {
+    display: flex;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 16px;
+    
+}
+
+#submitForm {
+    background-color: #551e6e;
+    color: #fff;
+}
+
+#CloseForm {
+    background-color: #ff0019;
+    color: #fff;
+    margin-left: 8px;
+}
+
+.flex-form {
+    width: 100%;
+
+
+}
+.flex-form div
+{
+    margin-top: 8px;
+    width: 100%;
+}
+
+
+.form-actions
+{
+display: flex;
+gap: 8px;
+}
+
+.details-form {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.form-group p
+{
+    margin-top: 5px;
+    font-size: 1.3rem;
+    
+}
+
 
 @media  (max-width : 930px) {
     
@@ -400,7 +509,7 @@ body
         gap:     20px;
         align-items: center;
         justify-content: center;
-        
+       
     }
 
     

@@ -424,10 +424,15 @@ let changment_player_afiche =document.querySelector('.changment_player_afiche')
 function positin(pc ,id) {
   changment_player_afiche.innerHTML =''
     for (let i = 0; i < players.length; i++) {
+
+      
+ 
         if (pc === players[i].position) {
           aficherlistchange(i,id)
         }
-              
+             
+      
+ 
     }
   }
 
@@ -435,9 +440,8 @@ function positin(pc ,id) {
 
   function aficherlistchange(n,id)
   {
-    
 
-    
+
       changment_player_afiche.innerHTML +=`
                           <div class="cardplyer" id="a${n}">
                         <div class="imagePlayer">
@@ -460,6 +464,8 @@ function positin(pc ,id) {
 
 function swap(n,id)
 {
+    playerentr.push(players[n])
+
   let element_player =document.getElementById(id)
   let changment_player_afichen_ID =document.getElementById('a'+n)
    changment_player_afichen_ID.innerHTML = ''
@@ -482,3 +488,52 @@ function swap(n,id)
   `
 }
 
+
+let activ = document.querySelector(".playerForm")
+
+function nambutton_edite() {
+  if (activ.style.display === "none") {
+
+    activ.style.display = "flex"
+  }else
+  {
+    activ.style.display ="none"
+  }  
+}
+let actichange = document.querySelectorAll(".button_add")
+
+
+function nambutton_change() {
+  
+for (let i = 0; i < 11; i++) {
+    
+  if (actichange[i].style.display === "none") {
+
+      actichange[i].style.display = "block"
+    }else
+    {
+
+      actichange[i].style.display ="none"
+    }  
+  
+}
+}
+
+let playerName=document.getElementById('playerName')
+
+
+let regxname=/^[a-zA-Z '.-]*$/
+playerName.addEventListener('input',function ()
+{
+  if(regxname.test(this.value))
+  {
+    this.style.border ='2px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})

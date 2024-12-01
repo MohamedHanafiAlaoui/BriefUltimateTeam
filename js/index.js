@@ -462,44 +462,44 @@ function aficherlistchange(n, id) {
 }
 
 
-// function aficherlistchangeplayer() {
-//   changment_player_afiche.innerHTML = ''
+function aficherlistchangeplayer() {
+  changment_player_afiche.innerHTML = ''
 
 
-//   for (let i = 0; i < players.length; i++) {
-//     let isInPlayerEntr = false;
+  for (let i = 0; i < players.length; i++) {
+    let isInPlayerEntr = false;
 
-//       for (let j = 0; j < playerentr.length; j++) {
-//       if (playerentr[j] === players[i]) {
-//         isInPlayerEntr = true;
-//         break;
-//       }
+      for (let j = 0; j < playerentr.length; j++) {
+      if (playerentr[j] === players[i]) {
+        isInPlayerEntr = true;
+        break;
+      }
       
-//       }
+      }
 
-//       if (!isInPlayerEntr) {
-//         changment_player_afiche.innerHTML += `
-//         <div class="cardplyer" id="a${i}">
-//           <div class="imagePlayer">
-//             <img src="${players[i].photo}" alt="">
-//           </div>
-//           <div class="informationPlayer">
-//             <p>${players[i].name}</p>
-//             <span>${players[i].rating} ${players[i].position}</span>
-//             <br>
-//             <span><img src="${players[i].flag}" alt=""></span>
-//             <button onclick="swap()">
-//               <i class="fa-solid fa-right-left"></i>
-//             </button>
-//           </div>
-//         </div>
-//       `;
-//       }
+      if (!isInPlayerEntr) {
+        changment_player_afiche.innerHTML += `
+        <div class="cardplyer" id="a${i}">
+          <div class="imagePlayer">
+            <img src="${players[i].photo}" alt="">
+          </div>
+          <div class="informationPlayer">
+            <p>${players[i].name}</p>
+            <span>${players[i].rating} ${players[i].position}</span>
+            <br>
+            <span><img src="${players[i].flag}" alt=""></span>
+            <button onclick="swap()">
+              <i class="fa-solid fa-right-left"></i>
+            </button>
+          </div>
+        </div>
+      `;
+      }
 
-//   }
+  }
 
 
-// }
+}
 function deletea(n){
   for (let i = 0; i < playerentr.length; i++) {
     if (playerentr[i].name === n) {

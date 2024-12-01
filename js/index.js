@@ -417,76 +417,141 @@ let    players = [
   }
 ]
 let playerentr =[]
+
 let changment_player_afiche =document.querySelector('.changment_player_afiche')
 
 
 
-function positin(pc ,id) {
-  changment_player_afiche.innerHTML =''
-    for (let i = 0; i < players.length; i++) {
+function position(pc, id) {
+  changment_player_afiche.innerHTML = ''; 
 
+  for (let i = 0; i < players.length; i++) {
+    if (pc === players[i].position) {
+      let isInPlayerEntr = false;
       
- 
-        if (pc === players[i].position) {
-          aficherlistchange(i,id)
+      for (let j = 0; j < playerentr.length; j++) {
+        if (playerentr[j] === players[i]) {
+          isInPlayerEntr = true;
+          break;
         }
-             
-      
- 
+      }
+      if (!isInPlayerEntr) {
+        aficherlistchange(i, id); 
+      }
     }
   }
-
-
-
-  function aficherlistchange(n,id)
-  {
-
-
-      changment_player_afiche.innerHTML +=`
-                          <div class="cardplyer" id="a${n}">
-                        <div class="imagePlayer">
-                            <img src="${players[n].photo}" alt="">
-                        </div>
-                        <div class="informationPlayer">
-                            <p>${players[n].name}</p>
-                            <span>${players[n].rating}  ${players[n].position}</span>
-                            <br>
-                            <span><img src="${players[n].flag}" alt=""></span>
-                            <button onclick="swap(${n},'${id}')" >
-                                <i class="fa-solid fa-right-left"></i>
-                            </button>
-                        </div>
-                    </div> `
-  }
- 
-
-
-
-function swap(n,id)
-{
-    playerentr.push(players[n])
-
-  let element_player =document.getElementById(id)
-  let changment_player_afichen_ID =document.getElementById('a'+n)
-   changment_player_afichen_ID.innerHTML = ''
-  element_player.innerHTML =`
-          <div class="Pozitie">
-            <span>${players[n].rating} </span>
-            <span>${players[n].position}</span>
-            <span><img src="${players[n].flag}" alt=""></span>
-
-        </div>
-        <div class="Pozitie_img">
-            <div >
-            <img src="${players[n].photo}" alt="">
-            </div>
-
-        </div>
-        <div class="name_player">
-            <span>Cristiano Ronaldo</span>
-        </div>
-  `
 }
+
+function aficherlistchange(n, id) {
+  changment_player_afiche.innerHTML += `
+    <div class="cardplyer" id="a${n}">
+      <div class="imagePlayer">
+        <img src="${players[n].photo}" alt="">
+      </div>
+      <div class="informationPlayer">
+        <p>${players[n].name}</p>
+        <span>${players[n].rating} ${players[n].position}</span>
+        <br>
+        <span><img src="${players[n].flag}" alt=""></span>
+        <button onclick="swap(${n}, '${id}')">
+          <i class="fa-solid fa-right-left"></i>
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+
+// function aficherlistchangeplayer() {
+//   changment_player_afiche.innerHTML = ''
+
+
+//   for (let i = 0; i < players.length; i++) {
+//     let isInPlayerEntr = false;
+
+//       for (let j = 0; j < playerentr.length; j++) {
+//       if (playerentr[j] === players[i]) {
+//         isInPlayerEntr = true;
+//         break;
+//       }
+      
+//       }
+
+//       if (!isInPlayerEntr) {
+//         changment_player_afiche.innerHTML += `
+//         <div class="cardplyer" id="a${i}">
+//           <div class="imagePlayer">
+//             <img src="${players[i].photo}" alt="">
+//           </div>
+//           <div class="informationPlayer">
+//             <p>${players[i].name}</p>
+//             <span>${players[i].rating} ${players[i].position}</span>
+//             <br>
+//             <span><img src="${players[i].flag}" alt=""></span>
+//             <button onclick="swap()">
+//               <i class="fa-solid fa-right-left"></i>
+//             </button>
+//           </div>
+//         </div>
+//       `;
+//       }
+
+//   }
+
+
+// }
+function deletea(n){
+  for (let i = 0; i < playerentr.length; i++) {
+    if (playerentr[i].name === n) {
+      
+      
+      playerentr.splice(i,1)
+      console.log(playerentr);
+
+      break;
+    }
+  
+    
+  }
+  
+}
+
+function swap(n, id) {
+    playerentr.push(players[n]);
+    console.log(playerentr);
+    let element_player = document.getElementById(id);
+    let name_player = document.getElementById(id).querySelector(".name_player span")
+
+    if(name_player !== null)
+    {
+
+      deletea(name_player.textContent)
+
+    }
+
+    let changment_player_afichen_ID = document.getElementById('a' + n);
+    changment_player_afichen_ID.remove();
+
+    
+    element_player.innerHTML = `
+      <div class="Pozitie">
+        <span>${players[n].rating}</span>
+        <span>${players[n].position}</span>
+        <span><img src="${players[n].flag}" alt=""></span>
+      </div>
+      <div class="Pozitie_img">
+        <div>
+          <img src="${players[n].photo}" alt="">
+        </div>
+      </div>
+      <div class="name_player">
+        <span>${players[n].name}</span>
+      </div>
+    `;
+    aficherlistchangeplayer() 
+  
+}
+aficherlistchangeplayer() 
 
 
 let activ = document.querySelector(".playerForm")
@@ -574,3 +639,126 @@ COUNTRY.addEventListener('input',function ()
   
 })
 
+let playerPAC=document.getElementById('playerPAC')
+
+playerPAC.addEventListener('input',function ()
+{
+  if(regxnamber.test(this.value))
+  {
+    this.style.border ='3px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})
+
+let playerPAS=document.getElementById('playerPAS')
+
+playerPAS.addEventListener('input',function ()
+{
+  if(regxnamber.test(this.value))
+  {
+    this.style.border ='3px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})
+
+let playerDRI=document.getElementById('playerDRI')
+
+playerDRI.addEventListener('input',function ()
+{
+  if(regxnamber.test(this.value))
+  {
+    this.style.border ='3px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})
+
+
+let playerDEF=document.getElementById('playerDEF')
+
+playerDEF.addEventListener('input',function ()
+{
+  if(regxnamber.test(this.value))
+  {
+    this.style.border ='3px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})
+
+let playerPHY=document.getElementById('playerPHY')
+
+playerPHY.addEventListener('input',function ()
+{
+  if(regxnamber.test(this.value))
+  {
+    this.style.border ='3px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})
+
+let playerSHO=document.getElementById('playerSHO')
+
+playerSHO.addEventListener('input',function ()
+{
+  if(regxnamber.test(this.value))
+  {
+    this.style.border ='3px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})
+
+
+let regximg=/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/
+
+
+let playerClub=document.getElementById('playerClub')
+
+playerClub.addEventListener('input',function ()
+{
+  if(regximg.test(this.value))
+  {
+    this.style.border ='3px solid #7eff7e'
+
+    
+  }
+  else
+  {
+    this.style.borderColor='red'
+  }
+  
+})

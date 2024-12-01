@@ -563,6 +563,7 @@ function nambutton_edite() {
   }else
   {
     activ.style.display ="none"
+
   }  
 }
 let actichange = document.querySelectorAll(".button_add")
@@ -579,6 +580,8 @@ for (let i = 0; i < 11; i++) {
     {
 
       actichange[i].style.display ="none"
+    aficherlistchangeplayer() 
+
     }  
   
 }

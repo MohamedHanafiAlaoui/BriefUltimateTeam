@@ -303,9 +303,9 @@ body
     width: 100%;
     height: 80px;
 
-}
 
-.creat_player button
+}
+.creat_player button 
 {
     text-align: center;
     width: 100%;
@@ -315,6 +315,11 @@ body
     background-color: #f3a30f;
     border: none;
     cursor: pointer;
+}
+
+.creat_player .creat_player 
+{
+    margin-top: 8px;
 }
 #button_afhce
 {
@@ -559,5 +564,73 @@ input, select {
        
     }
 
+    .Soccer_field
+    {
+        width: 80%;
+        display: flex;
+     
+    }
+    .bg_img
+    {
+        width: 100%;
+    }
     
+}
+
+
+@media  (max-width : 730px) 
+{
+    .Soccer_field
+    {
+        width: 100%;
+        display: flex;
+     
+    }
+    .bg_img
+    {
+        width: 100%;
+    }
+    .mc
+    {
+        gap: 1%;
+    }
+
+    .df
+    {
+        gap: 4%;
+    }
+
+}
+
+@media  (max-width : 450px) 
+{
+
+    .mc
+    {
+        gap: 0%;
+    }
+
+    .df
+    {
+        gap: 0%;
+    }
+    .cards_img img {
+        object-fit: cover;
+        width: 80px;
+        height: 100px;
+    }
+    .cards_img {      
+        width: 80px;
+        height: 100px;
+    }
+    .postion {
+        height: 100px;
+        width: 80px;
+    }
+    .Pozitie span {
+        width: 10px;
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+
 }

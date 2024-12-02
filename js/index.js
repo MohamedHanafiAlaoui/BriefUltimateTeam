@@ -503,17 +503,11 @@ function aficherlistchangeplayer() {
 function deletea(n){
   for (let i = 0; i < playerentr.length; i++) {
     if (playerentr[i].name === n) {
-      
-      
       playerentr.splice(i,1)
       console.log(playerentr);
-
       break;
     }
-  
-    
-  }
-  
+  } 
 }
 
 function swap(n, id) {

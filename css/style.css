@@ -12,6 +12,7 @@ body
     background-image: url("../img/All_Streams_b.webp");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #000;
     /* height: 100vh; */
     width: 100%;
     display: flex;

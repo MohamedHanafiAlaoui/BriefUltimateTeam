@@ -388,7 +388,7 @@ document.getElementById('submitForm').addEventListener('click', (e) =>{
             else
             {
                 Swal.fire({
-                    title: "no seve",
+                    title: "no save",
                     text: "You clicked the button!",
                     icon: "error"
                   });

@@ -418,6 +418,8 @@ let    players = [
 ]
 let playerentr =[]
 
+
+
 let changment_player_afiche =document.querySelector('.changment_player_afiche')
 
 
@@ -488,7 +490,7 @@ function aficherlistchangeplayer() {
             <span>${players[i].rating} ${players[i].position}</span>
             <br>
             <span><img src="${players[i].flag}" alt=""></span>
-            <button onclick="swap()">
+            <button >
               <i class="fa-solid fa-right-left"></i>
             </button>
           </div>
@@ -566,7 +568,7 @@ let actichange = document.querySelectorAll(".button_add")
 function nambutton_change() {
   
 for (let i = 0; i < 11; i++) {
-    
+  
   if (actichange[i].style.display === "none") {
 
       actichange[i].style.display = "block"
@@ -581,181 +583,3 @@ for (let i = 0; i < 11; i++) {
 }
 }
 
-let playerName=document.getElementById('playerName')
-
-
-let regxname=/^[a-zA-Z '.-]*$/
-playerName.addEventListener('input',function ()
-{
-  if(regxname.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})
-
-let regxnamber=/^\d{1,2}$/
-
-let playerRating=document.getElementById('playerRating')
-
-playerRating.addEventListener('input',function ()
-{
-  if(regxnamber.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})
-
-let COUNTRY=document.getElementById('COUNTRY')
-
-COUNTRY.addEventListener('input',function ()
-{
-  if(regxname.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})
-
-let playerPAC=document.getElementById('playerPAC')
-
-playerPAC.addEventListener('input',function ()
-{
-  if(regxnamber.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})
-
-let playerPAS=document.getElementById('playerPAS')
-
-playerPAS.addEventListener('input',function ()
-{
-  if(regxnamber.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})
-
-let playerDRI=document.getElementById('playerDRI')
-
-playerDRI.addEventListener('input',function ()
-{
-  if(regxnamber.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})
-
-
-let playerDEF=document.getElementById('playerDEF')
-
-playerDEF.addEventListener('input',function ()
-{
-  if(regxnamber.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})
-
-let playerPHY=document.getElementById('playerPHY')
-
-playerPHY.addEventListener('input',function ()
-{
-  if(regxnamber.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})
-
-let playerSHO=document.getElementById('playerSHO')
-
-playerSHO.addEventListener('input',function ()
-{
-  if(regxnamber.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})
-
-
-let regximg=/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/
-
-
-let playerClub=document.getElementById('playerClub')
-
-playerClub.addEventListener('input',function ()
-{
-  if(regximg.test(this.value))
-  {
-    this.style.border ='3px solid #7eff7e'
-
-    
-  }
-  else
-  {
-    this.style.borderColor='red'
-  }
-  
-})

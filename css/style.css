@@ -558,6 +558,7 @@ input, select {
     overflow: hidden;
     position: relative;
     padding: 20px;
+    display: none;
 
   }
   .rating {
@@ -610,8 +611,10 @@ input, select {
   }
 
   .player-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 15px;
     padding: 10px;
     border-radius: 10px;
@@ -621,6 +624,7 @@ input, select {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100px;
     background: #8f898957;
     padding: 10px;
     border-radius: 8px;

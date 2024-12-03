@@ -271,7 +271,7 @@
         </section>
 
         <section class="playerForm">
-            
+             <!--onsubmit="(e) => addplayer(e)"-->
             <form id="playerForm">
             <div class="details-forms">
 
@@ -280,7 +280,7 @@
                 <div class="form-group">
                     <label for="playerName">Player Name</label>
                     <input type="text" id="playerName" placeholder="Enter Player Name" required />
-                    <p>valide</p>
+                    <!-- <p>valide</p> -->
                 </div>
                 <div class="form-group">
                     <label for="playerImage">Player Image URL</label>
@@ -289,14 +289,18 @@
                 </div>
                 <div class="form-group">
                     <label for="COUNTRY">Country</label>
-                    <input type="url" id="COUNTRY" placeholder="Enter Country Image URL" required />
+                    <input type="text" id="COUNTRY" placeholder="Enter Country Name" required />
                 </div>
                 <div class="form-group">
                     <label for="playerRating">Rating</label>
                     <input type="number" id="playerRating" placeholder="Enter Rating (0-99)" min="0" max="99" required />
                 </div>
+                <!-- <div class="form-group">
+                    <label for="playerRating">Rating</label>
+                    <input type="number" id="playerRating" placeholder="Enter Rating (0-99)" min="0" max="99" required />
+                </div> -->
                 <div class="form-group">
-                    <label for="playerClub">Club Image URL</label>
+                    <label for="playerClub">Flag Image URL</label>
                     <input type="url" id="playerClub" placeholder="Enter Club Image URL" required />
                 </div>
     
@@ -306,8 +310,7 @@
                         <option value="" disabled selected>Select Position</option>
                         <option value="GK">Goalkeeper (GK)</option>
                         <option value="RB">Right Back (RB)</option>
-                        <option value="CBR">Center Back Right (CBR)</option>
-                        <option value="CBL">Center Back Left (CBL)</option>
+                        <option value="CB">Center Back (CB)</option>
                         <option value="LB">Left Back (LB)</option>
                         <option value="RM">Right Midfielder (RM)</option>
                         <option value="CM">Center Midfielder (CM)</option>
@@ -355,7 +358,7 @@
 
                   
                 <div class="form-actions">
-                    <button type="submit" id="submitForm">Save</button>
+                    <button type="submit"  id="submitForm">Save</button>
                     <button type="button" onclick="nambutton_edite()">Close</button>
                 </div>
             </div>
@@ -389,8 +392,10 @@
         </section>
     
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="../js/index.js"></script>
+    <script src="../js/form.js"></script>
 
 </body>
 </html>

@@ -482,6 +482,7 @@ function aficherlistchangeplayer() {
       if (!isInPlayerEntr) {
         changment_player_afiche.innerHTML += `
         <div class="cardplyer" id="a${i}">
+        
           <div class="imagePlayer">
             <img src="${players[i].photo}" alt="">
           </div>
@@ -530,7 +531,9 @@ function swap(n, id) {
 
     
     element_player.innerHTML = `
+      <button class="button_aficher" onclick="Player_stats(${n})"><i class="fa-solid fa-eye"></i></button>
       <div class="Pozitie">
+
         <span>${players[n].rating}</span>
         <span>${players[n].position}</span>
         <span><img src="${players[n].flag}" alt=""></span>
@@ -581,5 +584,80 @@ for (let i = 0; i < 11; i++) {
     }  
   
 }
+}
+
+
+let player_card=document.querySelector(".player-card")
+let elemenet_heder=document.querySelector(".elemenet_heder")
+
+
+function Player_stats(n) {
+  
+  player_card.style.display="block"
+  if (players[n].position === "GK") {
+    elemenet_heder.innerHTML = `
+    <div class="rating">${players[n].rating}</div>
+  <div class="player-header">
+    <img src="${players[n].logo}" alt="Club Logo" class="club-logo">
+    <img src="${players[n].flag}" alt="Argentina Flag" class="flag">
+  </div>
+  <div class="player-photo">
+    <img src="${players[n].photo}" alt="Lionel Messi">
+  </div>
+  <h2 class="player-name">${players[n].name}</h2>
+  <p class="player-position">Position: ${players[n].position}</p>
+  <div class="player-stats">
+    <p>Diving: <span>${players[n].diving}</span></p>
+    <p>Handling: <span>${players[n].handling}</span></p>
+    <p>Kicking: <span>${players[n].kicking}</span></p>
+    <p>Reflexes: <span>${players[n].reflexes}</span></p>
+    <p>Speed: <span>${players[n].speed}</span></p>
+    <p>Positioning: <span>${players[n].positioning}</span></p>
+  </div>
+`
+  } else {
+    elemenet_heder.innerHTML = `
+    <div class="rating">${players[n].rating}</div>
+  <div class="player-header">
+    <img src="${players[n].logo}" alt="Club Logo" class="club-logo">
+    <img src="${players[n].flag}" alt="Argentina Flag" class="flag">
+  </div>
+  <div class="player-photo">
+    <img src="${players[n].photo}" alt="Lionel Messi">
+  </div>
+  <h2 class="player-name">${players[n].name}</h2>
+  <p class="player-position">Position: ${players[n].position}</p>
+  <div class="player-stats">
+    <p>Pace: <span>${players[n].pace}</span></p>
+    <p>Shooting: <span>${players[n].shooting}</span></p>
+    <p>Passing: <span>${players[n].passing}</span></p>
+    <p>Dribbling: <span>${players[n].dribbling}</span></p>
+    <p>Defending: <span>${players[n].defending}</span></p>
+    <p>Physical: <span>${players[n].physical}</span></p>
+  </div>
+`
+  }
+  console.log(closewinde.length);
+
+
+}
+
+// let closewinde=document.querySelector(".closewinde")
+// closewinde.addEventListener('click',() =>
+//   { 
+//     console.log(closewinde);
+   
+    
+//   }
+// )
+
+let closewinde = document.querySelector(".closewinde")
+
+
+closewinde.onclick = function() {
+
+  player_card.style.display="none"
+  
+  
 }
 

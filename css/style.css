@@ -522,7 +522,6 @@ input, select {
 }
 
 
-
 .details-forms
 {
     display: flex;
@@ -559,6 +558,7 @@ input, select {
     position: relative;
     padding: 20px;
     display: none;
+    z-index: 2;
 
   }
   .rating {
@@ -642,7 +642,27 @@ input, select {
     position: absolute;
     top: 10%;
   }
-
+  .button_aficher
+{
+    position: absolute;
+    top: -24px;
+    right: -25px;
+    z-index: 1;
+    background-color: #33ff00 !important ;
+}
+.closewinde
+{
+    position: absolute;
+    right: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: red;
+    border: none;
+}
 @media  (max-width : 930px) {
     
     
@@ -724,4 +744,8 @@ input, select {
         font-weight: bold;
     }
 
+}
+
+.hide_card{
+    display: none !important;
 }

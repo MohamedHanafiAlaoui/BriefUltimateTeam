@@ -663,6 +663,18 @@ input, select {
     background-color: red;
     border: none;
 }
+.supprimer
+{
+    padding: 5px;
+    border-radius: 8px;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+
+}
 @media  (max-width : 930px) {
     
     
@@ -746,6 +758,6 @@ input, select {
 
 }
 
-.hide_card{
+/* .hide_card{
     display: none !important;
-}
+} */

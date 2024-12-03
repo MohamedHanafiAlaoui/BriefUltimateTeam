@@ -400,15 +400,7 @@ document.getElementById('submitForm').addEventListener('click', (e) =>{
 
         })
 
-// document.getElementById('submitForm').addEventListener('click', (e) =>{
-//     event.stopPropagation();
-//     event.preventDefault();
-//     console.log("Hello");
-// });
 
-// function alaoui(event) {
-    
-// }
           
     
 

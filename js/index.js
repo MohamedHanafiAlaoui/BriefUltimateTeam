@@ -507,7 +507,6 @@ function deletea(n){
   for (let i = 0; i < playerentr.length; i++) {
     if (playerentr[i].name === n) {
       playerentr.splice(i,1)
-      console.log(playerentr);
       break;
     }
   } 
@@ -531,7 +530,7 @@ function swap(n, id) {
 
     
     element_player.innerHTML = `
-      <button class="button_aficher" onclick="Player_stats(${n})"><i class="fa-solid fa-eye"></i></button>
+      <button class="button_aficher" onclick="Player_stats(${n} ,'${id}')"><i class="fa-solid fa-eye"></i></button>
       <div class="Pozitie">
 
         <span>${players[n].rating}</span>
@@ -591,7 +590,7 @@ let player_card=document.querySelector(".player-card")
 let elemenet_heder=document.querySelector(".elemenet_heder")
 
 
-function Player_stats(n) {
+function Player_stats(n,id) {
   
   player_card.style.display="block"
   if (players[n].position === "GK") {
@@ -614,6 +613,9 @@ function Player_stats(n) {
     <p>Speed: <span>${players[n].speed}</span></p>
     <p>Positioning: <span>${players[n].positioning}</span></p>
   </div>
+                <button class="supprimer" onclick="supprimer('${players[n].name}' , '${id}') ">supprimer </button>
+
+
 `
   } else {
     elemenet_heder.innerHTML = `
@@ -635,21 +637,16 @@ function Player_stats(n) {
     <p>Defending: <span>${players[n].defending}</span></p>
     <p>Physical: <span>${players[n].physical}</span></p>
   </div>
+                <button class="supprimer" onclick="supprimer('${players[n].name}' , '${id}') ">supprimer </button>
+
 `
   }
-  console.log(closewinde.length);
+
 
 
 }
 
-// let closewinde=document.querySelector(".closewinde")
-// closewinde.addEventListener('click',() =>
-//   { 
-//     console.log(closewinde);
-   
-    
-//   }
-// )
+
 
 let closewinde = document.querySelector(".closewinde")
 
@@ -661,3 +658,16 @@ closewinde.onclick = function() {
   
 }
 
+
+function supprimer(n , id) {
+  for (let i = 0; i < playerentr.length; i++) {
+    if (playerentr[i].name === n) {
+      playerentr.splice(i,1)
+      document.getElementById(id).innerHTML=''
+      player_card.style.display="none"
+
+      break;
+    }
+    
+  }
+}

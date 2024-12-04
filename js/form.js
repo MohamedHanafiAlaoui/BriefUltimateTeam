@@ -88,7 +88,7 @@ COUNTRY.addEventListener('input',function ()
 {
   if(regxname.test(this.value) && this.value.trim() != '')
   {
-    this.style.borCounder ='3px solid #7eff7e'
+    this.style.border ='3px solid #7eff7e'
     ajouterplayer.nationality = this.value
     ajouterplayerGK.nationality = this.value
   }
